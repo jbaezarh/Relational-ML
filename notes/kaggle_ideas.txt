@@ -1,0 +1,20 @@
+- https://www.kaggle.com/code/fareedkhan557/github-social-network-analysis-using-networkx
+    Análisis con networkx
+
+- https://www.kaggle.com/code/mohammadmahdibarghi/github-social-network#construct-graph
+    Data processing, EDA and GCNN with pytorch
+
+- https://www.kaggle.com/code/olegopoly/gnn-task-1
+    Extracción manual de caracteristicas (networkx) y SVM (sklearn)
+
+- https://www.kaggle.com/code/rozemberczki/musae-github-example
+    Regresión logística construyendo manualmente la matriz de adyacencia
+
+
+
+https://docs.rapids.ai/api/cugraph/stable/
+cugraph permite conseguir n mayor rendimiento en las funciones de networkx usando la gpu
+https://docs.rapids.ai/install/#selector
+conda create -n rapids-24.12 -c rapidsai -c conda-forge -c nvidia  \
+    rapids=24.12 python=3.10 'cuda-version>=12.0,<=12.5' \
+    networkx nx-cugraph=24.12 graphistry

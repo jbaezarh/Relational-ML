@@ -1,0 +1,20 @@
+
+NEO4J
+
+### Basic query for importing the data:
+CREATE INDEX FOR (n:Node) ON (n.id);
+
+LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/jbaezarh/relational-data/refs/heads/main/data/musae_git_edges.csv" AS row
+MERGE (source:Node {id: row.id_1})
+MERGE (target:Node {id: row.id_2})
+MERGE (source)-[:CONNECTED]->(target);
+
+----------------------------------------------
+Añadir el target y colorear
+----------------------------------------------
+
+
+### Check
+
+// Sample data visualization
+MATCH (n)-[r]->(m) RETURN n, r, m LIMIT 25;
