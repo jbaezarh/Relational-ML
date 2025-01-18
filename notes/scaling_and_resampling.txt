@@ -1,0 +1,14 @@
+1. ADASYN (Adaptive Synthetic Sampling)
+Nature: A distance-based oversampling method that relies on k-nearest neighbors (k-NN) to generate synthetic samples in areas of higher class imbalance.
+Scaling Recommendation: Scale before resampling.
+Scaling ensures that all features contribute equally to the k-NN distance calculations.
+
+2. NearMiss (Undersampling)
+Nature: A distance-based undersampling method that selects samples based on their distance to other points (e.g., the majority class samples closest to the minority class in version 1).
+Scaling Recommendation: Scale before resampling.
+Since distances are critical in this method, unscaled features may lead to biased sampling.
+
+3. SMOTETomek (Combination of SMOTE and Tomek Links)
+Nature: A hybrid method combining SMOTE (distance-based oversampling) and Tomek Links (undersampling by removing overlapping samples based on distances).
+Scaling Recommendation: Scale before resampling.
+Both SMOTE and Tomek Links rely on distance metrics, so proper scaling is essential.

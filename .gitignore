@@ -10,3 +10,5 @@ __pycache__/
 .env/
 
 
+data/processed/X_node2vect.csv
+data/processed/y_node2vect.csv

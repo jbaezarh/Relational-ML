@@ -1,0 +1,1 @@
+node2vect_data.zip should be unzipped and both csv files should be placed in data/processed directory
